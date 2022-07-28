@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footballteam.co.in</title>
+    <link rel="stylesheet" href="style.css"></head>
+    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<body>
+        <div class="navigation">
+            <div class="toggle"><span></span></div>
+            <ul>
+                <li><a href="load.html">Home</a></li>
+                <li><a href="index.html">Leagues</a></li>
+                <li><a href="load.html">Top 10 Players</a></li>
+                <li><a href="load.html">Be Updated</a></li>
+                <li><a href="load.html">Developer Info</a></li>
+            </ul>
+        </div>
+
+        <div class="cards">
+        <section class="c1">
+            <div class="container">
+                <div class="card ff">
+                    <div class="imgbx">
+                        <ul>
+                        <li><a href="fifa.html   
+                        "><img class="fifa" src="img1.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card cl">
+                    <div class="imgbx">
+                        <ul>
+                        <li><a href="load.html"><img src="img2.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card ll">
+                    <div class="imgbx">
+                        <ul>
+                        <li><a href="load.html"><img src="img3.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <section class="c2">
+                <div class="container">
+                <div class="card pl">
+                    <div class="imgbx">
+                        <ul>
+                        <li><a href="load.html"><img src="img4.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card hl">
+                    <div class="imgbx">
+                        <ul>
+                        <li><a href="load.html"><img src="img5.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card el">
+                    <div class="imgbx">
+                        <ul>
+                        <li><a href="load.html"><img class="euro" src="img6.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </section>
+            </div>
+            
+            <footer>
+                <ul class="link">
+                    <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+                <a class="copyrighttext">&copy; footballteam.co.in</a>
+            </footer>
+        <script type="text/javascript" src="vanilla-tilt.js"></script>
+        <script>
+            VanillaTilt.init(document.querySelectorAll(".link li a"), 
+    {
+		max: 40,
+		speed: 400,
+        glare: true,
+        "max-glare": 1,
+	});
+            VanillaTilt.init(document.querySelectorAll(".card"),{
+                max: 22,
+                speed: 150,
+                glare: true,
+                "max-glare": 2,
+            });
+        </script>
+        <script>
+            const navigation = document.querySelector('.navigation');
+            document.querySelector('.toggle').onclick = function()
+            {
+                this.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        </script>
+</body>
+</html>

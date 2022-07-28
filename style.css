@@ -1,0 +1,256 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: block;
+    min-height: 100vh;
+    background:linear-gradient(black, navy 150%);
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00,#f0f );
+    clip-path: circle(20% at right 30%);
+}
+body::after{
+    content: '';
+    position: absolute;
+    z-index: -1000;
+    bottom: -400px;
+    left: -150px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ffbc00,#c71515 );
+    clip-path: circle( 20%);
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.navigation{
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    width: 250px;
+    height: 50px;
+    background: #2196f3;
+    transition: 0.5s;
+    z-index: 100000;
+    overflow: hidden;
+}
+.navigation.active{
+    height: 300px;
+}
+.navigation .toggle{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #2196f3;display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: flex-end;
+    padding: 0 20px;
+    display: flex;
+    font-size: 20px;
+    cursor: pointer;
+}
+.navigation .toggle::before{
+    content: 'Menu';
+    margin-right: 10px;
+}
+.navigation .toggle.active::before{
+    content: 'Close';
+    margin-right: 10px;
+}
+.navigation .toggle span{
+    position: relative;
+    width: 20px;
+    height: 50px;
+}
+.navigation .toggle span::before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    transition: 0.5s;
+    background: #fff;
+}
+.navigation .toggle span::after{
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    transition: 0.5s;
+    background: #fff;
+}
+.navigation .toggle.active span::before{
+    transform: rotate(225deg);
+    top: 24px;
+}
+.navigation .toggle.active span::after{
+    transform: rotate(135deg);
+    bottom: 24px;
+}
+.navigation ul{
+    position: relative;
+    background: rgb(30, 30, 30);
+}
+.navigation ul li{
+    list-style: none;
+}
+.navigation ul li a{
+    position: relative;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    height: 50px;
+    color: #fff;
+    font-size: 20px;
+    transition: 1s;
+}
+.navigation ul li a:hover{
+    transition: 0s;
+    background: #2196f3;
+}
+.cards{
+    margin: 50px;
+}
+img{
+    height: 410px;
+}
+.fifa{
+    width: 500px;
+    padding-left: 25px;
+}
+.euro{
+    height: 320px;
+}
+.container{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    overflow: hidden;
+    display: flex;
+    background: #fff;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    filter: grayscale(1);
+    transition: 0.6s;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.container .cl:hover{
+    box-shadow: 0 0 5px #233060,
+                0 0 15px #233060,
+                0 0 25px #233060,
+                0 0 100px #233060;
+}
+.container .ll:hover{
+    box-shadow: 0 0 5px #FE2C2C,
+                0 0 15px #FE2C2C,
+                0 0 25px #FE2C2C,
+                0 0 60px #FE2C2C;
+}
+.container .ff:hover{
+    box-shadow: 0 0 5px #971a1a,
+                0 0 15px #971a1a,
+                0 0 45px #971a1a,
+                0 0 100px #971a1a;
+}
+.container .pl:hover{
+    box-shadow: 0 0 5px #28F3FF,
+                0 0 15px #28F3FF,
+                0 0 25px #28F3FF,
+                0 0 60px #28F3FF;
+}
+.container .hl:hover{
+    box-shadow: 0 0 5px #690000,
+                0 0 15px #690000,
+                0 0 45px #690000,
+                0 0 100px #690000;
+}
+.container .el:hover{
+    box-shadow: 0 0 5px #21dbf3,
+                0 0 15px #21dbf3,
+                0 0 45px #21dbf3,
+                0 0 100px #21dbf3;
+}
+.container .card:hover{
+    filter: grayscale(0);
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background: #F9E900;
+}
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+footer ul li a:hover{
+    font-size: 70px;
+    transition: 0.25s ease;
+    color: #e9f5ff;
+}
+footer ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    color: #000;
+    backdrop-filter: blur(2);
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 50%;
+}
+.link{margin-left: 10%;}
+.link .js-tilt-glare{
+    border-radius: 50%;
+}
+footer ul li .facebook:hover{
+    background: #1877f2;
+}
+footer ul li .instagram:hover{
+    background: #e4405f;
+}
+footer ul li .twitter:hover{
+    background: #346d9b;
+}
+footer .copyrighttext{
+    margin-right: 10%;
+    cursor: pointer;
+    color: #000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: 0.3s ease-in-out;
+}
+footer .copyrighttext:hover{
+    letter-spacing: 2px;
+}
